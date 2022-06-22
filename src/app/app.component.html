@@ -1,0 +1,14 @@
+<h1> AG Grid Implementation </h1>
+<input type="text"  class="form-control" id="filter-text-box" [(ngModel)]= "searchText"
+placeholder="Enter your search text here" (ngModelChange)="onFilterBoxChanged()"
+style="width:300px">
+<ag-grid-angular
+style="width:1500px; height:1500px;"
+class="ag-theme-alpine"
+[rowData]="rowData"
+[columnDefs]="columnDefs"
+(gridReady)="onGidReady1($event)"
+>
+</ag-grid-angular>
+
+
